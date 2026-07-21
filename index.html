@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Authentication Portal</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ========================================= -->
+    <!-- LEFT PANEL -->
+    <!-- ========================================= -->
+
+    <div class="left-panel">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+
+                <span></span>
+
+            </div>
+
+            <div>
+
+                <h2>LOGO</h2>
+
+                <p>Slogan Here</p>
+
+            </div>
+
+        </div>
+
+        <div class="left-content">
+
+            <h1>
+
+                Start our
+                <br>
+                journey
+
+            </h1>
+
+            <p>
+
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- RIGHT PANEL -->
+    <!-- ========================================= -->
+
+    <div class="right-panel">
+
+        <!-- ========================================= -->
+        <!-- LOGIN FORM -->
+        <!-- ========================================= -->
+
+        <div id="login-form">
+
+            <h1>Login</h1>
+
+            <div class="input-group">
+
+                <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Enter your Email"
+                        required>
+
+            </div>
+
+            <div class="input-group password-box">
+
+                <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Password"
+                        required>
+
+                <span class="toggle-password"
+                      onclick="togglePassword('login-password',this)">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </span>
+
+            </div>
+
+            <div class="login-options">
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Remember me
+
+                </label>
+
+                <a href="#"
+                   onclick="forgotPassword()">
+
+                    Forgot Password?
+
+                </a>
+
+            </div>
+
+            <button onclick="login()">
+
+                Login
+
+            </button>
+
+            <div class="bottom-text">
+
+                Don't have an account?
+
+                <a onclick="toggleForms()">
+
+                    Register
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- REGISTER FORM -->
+        <!-- ========================================= -->
+
+        <div id="register-form" class="hidden">
+
+            <h1>Sign Up</h1>
+
+            <div class="row">
+
+                <div class="input-group">
+
+                    <input
+                            type="text"
+                            id="first-name"
+                            placeholder="First Name">
+
+                </div>
+
+                <div class="input-group">
+
+                    <input
+                            type="text"
+                            id="last-name"
+                            placeholder="Last Name">
+
+                </div>
+
+            </div>
+
+            <div class="input-group">
+
+                <input
+                        type="text"
+                        id="reg-name"
+                        placeholder="Username">
+
+            </div>
+
+            <div class="input-group">
+
+                <input
+                        type="email"
+                        id="reg-email"
+                        placeholder="Enter your Email">
+
+            </div>
+
+            <div class="input-group">
+
+                <input
+                        type="tel"
+                        id="reg-phone"
+                        placeholder="Phone Number">
+
+            </div>
+
+            <div class="input-group password-box">
+
+                <input
+                        type="password"
+                        id="reg-password"
+                        placeholder="Choose Password">
+
+                <span class="toggle-password"
+                      onclick="togglePassword('reg-password',this)">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </span>
+
+            </div>
+
+            <div class="input-group password-box">
+
+                <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Confirm Password">
+
+                <span class="toggle-password"
+                      onclick="togglePassword('confirm-password',this)">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </span>
+
+            </div>
+
+            <label class="terms">
+
+                <input
+                        type="checkbox"
+                        id="terms">
+
+                I agree to the
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </label>
+
+            <button onclick="register()">
+
+                Register
+
+            </button>
+
+            <div class="bottom-text">
+
+                Already a member?
+
+                <a onclick="toggleForms()">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- RESET PASSWORD -->
+        <!-- ========================================= -->
+
+        <div id="reset-form" class="hidden">
+
+            <h1>Reset Password</h1>
+
+            <div class="input-group">
+
+                <input
+                        type="email"
+                        id="reset-email"
+                        placeholder="Enter your Email">
+
+            </div>
+
+            <button onclick="forgotPassword()">
+
+                Send Reset Link
+
+            </button>
+
+            <div class="bottom-text">
+
+                <a onclick="showLogin()">
+
+                    Back to Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- SCRIPTS -->
+<!-- ========================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
