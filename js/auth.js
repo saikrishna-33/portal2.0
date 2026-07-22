@@ -97,7 +97,7 @@ async function register() {
     const terms = document.getElementById("terms").checked;
 
     if (username === "") {
-        alert("Please enter Username.");
+        alert("Please enter Name.");
         return;
     }
 
