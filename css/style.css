@@ -33,9 +33,9 @@ body{
 =========================================== */
 
 .wrapper{
-    width:1000px;
+    width:1200px;
     max-width:100%;
-    min-height:620px;
+    min-height:560px;
     background:#fff;
     display:flex;
     border-radius:28px;
@@ -49,7 +49,7 @@ body{
 =========================================== */
 
 .left-panel{
-    width:38%;
+    width:40%;
     background:#3d3c68;
     color:#fff;
     padding:55px 45px;
@@ -153,8 +153,8 @@ body{
 
 h1{
     color:#222;
-    font-size:42px;
-    margin-bottom:35px;
+    font-size:34px;
+    margin-bottom:20px;
     font-weight:700;
 }
 
@@ -411,7 +411,7 @@ a{
 
     .left-panel{
         width:100%;
-        padding:45px;
+        padding:55px 45px;
         text-align:center;
     }
 
@@ -428,7 +428,7 @@ a{
     }
 
     .right-panel{
-        padding:45px;
+        padding: 45px 35px;
     }
 }
 
