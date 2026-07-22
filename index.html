@@ -51,7 +51,7 @@
 
             <h1>
 
-                Start our
+                Start your
                 <br>
                 journey
 
@@ -59,10 +59,9 @@
 
             <p>
 
-                Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam.
+                We're delighted to welcome you. 
+                Complete the registration process and 
+                discover a simple, personalized experience.
 
             </p>
 
@@ -221,10 +220,9 @@
                         id="terms">
 
                 I agree to the
-                <a href="#">
-                    Terms & Conditions
+                <a href="terms.html" target="_blank">
+                Terms & Conditions
                 </a>
-
             </label>
 
             <button onclick="register()">
@@ -293,6 +291,13 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script src="js/auth.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
 
+if (params.get("signup") === "true") {
+    document.getElementById("login-form").classList.add("hidden");
+    document.getElementById("register-form").classList.remove("hidden");
+}
+</script>
 </body>
 </html>
