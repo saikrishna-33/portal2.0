@@ -49,19 +49,17 @@
 
         <div class="left-content">
 
-            <h1>
+            <h2>
 
-                Start your
+                Start our
                 <br>
                 journey
 
-            </h1>
+            </h2>
 
             <p>
 
-                We're delighted to welcome you. 
-                Complete the registration process and 
-                discover a simple, personalized experience.
+                Register now for a personalized experience.
 
             </p>
 
@@ -213,17 +211,26 @@
 
             </div>
 
-            <label class="terms">
+            <div class="terms">
 
-                <input
-                        type="checkbox"
-                        id="terms">
+                <label for="terms">
 
-                I agree to the
-                <a href="terms.html" target="_blank">
-                Terms & Conditions
+                    <input
+                            type="checkbox"
+                            id="terms">
+
+                    I agree to the
+
+                </label>
+
+                <a href="terms.html"
+                   onclick="saveRegisterForm()">
+
+                    Terms & Conditions
+
                 </a>
-            </label>
+
+            </div>
 
             <button onclick="register()">
 
