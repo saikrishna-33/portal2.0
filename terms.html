@@ -237,20 +237,31 @@ constitutes acceptance of the revised Terms.
 </p>
 
 </div>
-
 <div class="footer">
 
 <p>
 © 2026 Authentication Portal. All Rights Reserved.
 </p>
 
-<a href="index.html?signup=true" class="btn">
-I Agree & Continue
+<a href="#" id="agreeBtn" class="btn">
+    I Agree & Continue
 </a>
 
 </div>
 
 </div>
+
+<script>
+document.getElementById("agreeBtn").addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    sessionStorage.setItem("termsAccepted", "true");
+
+    window.location.href = "index.html?signup=true";
+
+});
+</script>
 
 </body>
 </html>
