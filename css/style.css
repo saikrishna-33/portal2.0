@@ -33,7 +33,7 @@ body{
 =========================================== */
 
 .wrapper{
-    width:1200px;
+    width:1100px;
     max-width:100%;
     min-height:560px;
     background:#fff;
@@ -49,7 +49,7 @@ body{
 =========================================== */
 
 .left-panel{
-    width:40%;
+    width:42%;
     background:#3d3c68;
     color:#fff;
     padding:55px 45px;
@@ -106,7 +106,7 @@ body{
 }
 
 .left-content h1{
-    font-size:55px;
+    font-size:70px;
     line-height:1.1;
     margin-bottom:35px;
     font-weight:700;
@@ -432,51 +432,104 @@ a{
     }
 }
 
-@media(max-width:600px){
-    body{
-        padding:15px;
-    }
+@media screen and (max-width:768px){
 
-    .wrapper{
-        border-radius:18px;
-    }
-
-    .left-panel{
-        padding:30px;
-    }
-
-    .right-panel{
-        padding:28px;
-    }
-
-    .row{
-        flex-direction:column;
-        gap:0;
-    }
-
-    h1{
-        font-size:34px;
-    }
-
-    .left-content h1{
-        font-size:36px;
-    }
-
-    button{
-        height:50px;
-    }
-
-    .login-options{
-        flex-direction:column;
-        gap:15px;
-        align-items:flex-start;
-    }
-
-    .terms{
-        align-items:flex-start;
-    }
+body{
+    padding:0;
+    background:#ffffff;
 }
 
+.wrapper{
+    width:100%;
+    min-height:100vh;
+    border-radius:0;
+    box-shadow:none;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Purple Top */
+
+.left-panel{
+    width:100%;
+    height:48vh;
+    border-radius:0 0 35px 35px;
+    padding:40px 30px;
+    justify-content:space-between;
+}
+
+.logo{
+    justify-content:flex-start;
+}
+
+.logo h2{
+    font-size:34px;
+}
+
+.left-content{
+    margin:0;
+}
+
+.left-content h1{
+    font-size:58px;
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.left-content p{
+    font-size:18px;
+    line-height:34px;
+}
+
+/* White Bottom */
+
+.right-panel{
+    width:100%;
+    height:52vh;
+    padding:35px 28px;
+    border-radius:30px 30px 0 0;
+    margin-top:-15px;
+}
+
+h1{
+    font-size:52px;
+    margin-bottom:35px;
+}
+
+.row{
+    flex-direction:column;
+    gap:0;
+}
+
+.input-group{
+    margin-bottom:24px;
+}
+
+.input-group input{
+    font-size:18px;
+    padding:16px 0;
+}
+
+button{
+    height:60px;
+    font-size:22px;
+    border-radius:15px;
+}
+
+.login-options{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.terms{
+    align-items:flex-start;
+}
+
+.bottom-text{
+    font-size:17px;
+}
+}
 /* ===========================================
    EXTRA ANIMATIONS
 =========================================== */
