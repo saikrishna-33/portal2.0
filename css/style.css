@@ -33,15 +33,14 @@ body{
 =========================================== */
 
 .wrapper{
-    width:1200px;
+    width:700px;
     max-width:100%;
-    min-height:560px;
+    min-height:450px;
     background:#fff;
     display:flex;
-    border-radius:28px;
+    border-radius:24px;
     overflow:hidden;
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
-    transition:.4s;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
 /* ===========================================
@@ -52,10 +51,9 @@ body{
     width:40%;
     background:#3d3c68;
     color:#fff;
-    padding:55px 45px;
+    padding:40px 35px;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
 }
 
 /* ===========================================
@@ -101,20 +99,23 @@ body{
 =========================================== */
 
 .left-content{
-    margin-top:auto;
-    margin-bottom:auto;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .left-content h1{
-    font-size:55px;
-    line-height:1.1;
-    margin-bottom:35px;
+    font-size:46px;
+    line-height:1.05;
+    margin-bottom:18px;
     font-weight:700;
+    word-break:break-word;
 }
 
 .left-content p{
-    font-size:15px;
-    line-height:30px;
+    font-size:16px;
+    line-height:26px;
     color:#d8d8d8;
 }
 
@@ -123,13 +124,16 @@ body{
 =========================================== */
 
 .right-panel{
-    flex:1;
+    width:60%;
+    background:#fff;
+    padding:40px 45px;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:55px 65px;
-    position:relative;
-    background:#fff;
+}
+.right-panel form{
+    width:100%;
+    max-width:420px;
 }
 
 /* ===========================================
@@ -151,10 +155,10 @@ body{
    TITLES
 =========================================== */
 
-h1{
-    color:#222;
-    font-size:34px;
-    margin-bottom:20px;
+h2{
+    color:#ffffffe9;
+    font-size:28px;
+    margin-bottom:18px;
     font-weight:700;
 }
 
@@ -193,7 +197,7 @@ h1{
 
 .input-group{
     position:relative;
-    margin-bottom:22px;
+    margin-bottom:18px;
 }
 
 .input-group input{
@@ -202,8 +206,8 @@ h1{
     outline:none;
     border-bottom:2px solid #e2e2e2;
     background:transparent;
-    padding:14px 0;
-    font-size:15px;
+    padding:10px 0;
+    font-size:14px;
     color:#333;
     transition:.35s;
     font-family:'Poppins',sans-serif;
@@ -286,20 +290,18 @@ h1{
 
 .terms{
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     gap:10px;
-    margin-top:18px;
-    margin-bottom:28px;
+    margin:20px 0;
     font-size:14px;
-    color:#666;
+    color:#1c1c1c;
+    line-height:1.5;
 }
 
 .terms input{
-    width:16px;
-    height:16px;
-    accent-color:#b76cff;
+    margin-top:4px;
+    flex-shrink:0;
 }
-
 .terms a{
     color:#b76cff;
     text-decoration:none;
@@ -316,12 +318,12 @@ h1{
 
 button{
     width:100%;
-    height:54px;
+    height:46px;
     border:none;
     border-radius:8px;
     background:#b76cff;
     color:white;
-    font-size:17px;
+    font-size:16px;
     font-weight:600;
     cursor:pointer;
     transition:.35s;
@@ -332,95 +334,27 @@ button:hover{
     background:#9f55ef;
     transform:translateY(-2px);
     box-shadow:0 12px 24px rgba(183,108,255,.35);
+    letter-spacing:.4px;
 }
 
-button:active{
-    transform:scale(.98);
-}
-
-/* ===========================================
-   BOTTOM TEXT
-=========================================== */
-
-.bottom-text{
-    margin-top:28px;
-    text-align:center;
-    font-size:15px;
-    color:#555;
-}
-
-.bottom-text a{
-    color:#b76cff;
-    text-decoration:none;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.bottom-text a:hover{
-    text-decoration:underline;
+.input-group input:focus{
+    transform:translateX(2px);
 }
 
 /* ===========================================
-   LINKS
+   RESPONSIVE DESIGN
 =========================================== */
 
-a{
-    transition:.25s;
-}
+@media (max-width:992px){
 
-/* ===========================================
-   INPUT HOVER
-=========================================== */
-
-.input-group:hover input{
-    border-bottom-color:#c98dff;
-}
-
-/* ===========================================
-   CUSTOM SCROLLBAR
-=========================================== */
-
-::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#b76cff;
-    border-radius:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#ececec;
-}
-
-/* ===========================================
-   RESPONSIVE
-=========================================== */
-
-@media(max-width:1050px){
-    .wrapper{
-        width:95%;
-    }
-}
-
-@media(max-width:900px){
     .wrapper{
         flex-direction:column;
-        min-height:auto;
     }
 
-    .left-panel{
+    .left-panel,
+    .right-panel{
+        flex:1 1 100%;
         width:100%;
-        padding:55px 45px;
-        text-align:center;
-    }
-
-    .logo{
-        justify-content:center;
-    }
-
-    .left-content{
-        margin-top:50px;
     }
 
     .left-content h1{
@@ -428,78 +362,29 @@ a{
     }
 
     .right-panel{
-        padding: 45px 35px;
-    }
-}
-
-@media(max-width:600px){
-    body{
-        padding:15px;
-    }
-
-    .wrapper{
-        border-radius:18px;
-    }
-
-    .left-panel{
-        padding:30px;
-    }
-
-    .right-panel{
-        padding:28px;
-    }
-
-    .row{
-        flex-direction:column;
-        gap:0;
-    }
-
-    h1{
-        font-size:34px;
-    }
-
-    .left-content h1{
-        font-size:36px;
-    }
-
-    button{
-        height:50px;
-    }
-
-    .login-options{
-        flex-direction:column;
-        gap:15px;
-        align-items:flex-start;
-    }
-
-    .terms{
-        align-items:flex-start;
+        padding:40px;
     }
 }
 
 /* ===========================================
-   EXTRA ANIMATIONS
+   BOTTOM TEXT
 =========================================== */
 
-button,
-input,
-a,
-.logo-icon{
-    transition:.3s ease;
+.bottom-text{
+    margin-top:15px;
+    text-align:center;
+    font-size:12px;      /* Change this value */
+    color:#666;
 }
 
-.wrapper:hover{
-    transform:translateY(-2px);
+.bottom-text a{
+    color:#b76cff;
+    text-decoration:none;
+    font-size:14px;      /* Change this value */
+    font-weight:600;
+    cursor:pointer;
 }
 
-.logo-icon:hover{
-    transform:rotate(8deg);
-}
-
-button:hover{
-    letter-spacing:.4px;
-}
-
-.input-group input:focus{
-    transform:translateX(2px);
+.bottom-text a:hover{
+    text-decoration:underline;
 }
